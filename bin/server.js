@@ -55,6 +55,6 @@ const server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-console.log(`API is alive on ${port}! It's WORKS `);
+console.log(`API is alive on ${port}! It WORKS `);
 
 //db admin - pass: RNInGlBEolKJgO13

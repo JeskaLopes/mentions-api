@@ -5,6 +5,12 @@ require('dotenv').config();
 
 // App
 const app = express();
+const bodyParser = require('body-parser')
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 //Database
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
     useNewUrlParser: true

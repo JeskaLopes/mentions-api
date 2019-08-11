@@ -3,6 +3,6 @@ const router = express.Router();
 const mentionsController = require('../controllers/mentions-controller');
 
 router.get('/', mentionsController.listMentions);
-router.post('/', mentionsController.createMention);
+router.post('/', mentionsController.createMentions);
 
 module.exports = router;
