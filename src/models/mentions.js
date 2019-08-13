@@ -3,16 +3,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 //schema model - db model
-const batata = new Schema({
+const mentionsSchema = new Schema({
   friend: {
     type: String,
-    /* required: true, */
+    required: true, 
     trim: true
   },
   mention: {
     type: String,
-    /* required: true */
+    required: true 
   }
 });
 
-module.exports = mongoose.model('Mentions', batata);
+module.exports = mongoose.model('Mentions', mentionsSchema);
