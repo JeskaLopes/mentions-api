@@ -6,7 +6,7 @@ require('dotenv').config();
 // App
 const app = express();
 const bodyParser = require('body-parser')
-// parse application/x-www-form-urlencoded
+//O BODY PARSER FOI NECESSÁRIO POIS AO ENVIAR DADOS COM O METODO POST, O BANCO NÃO RECEBIA COMO JSON MAS SIM COMO OBJETO APARENTEMENTE
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json

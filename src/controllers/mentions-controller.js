@@ -12,6 +12,7 @@ exports.listMentions = async (req, res) => {
     res.status(200).send(data);
   }
   catch (e) {
+    //AQUI RETORNAVA UM ERRO 500, TOTALMENTE GENÉRICO, ENTÃO USEI O METODO toString() PARA QUE O CATCH ME RETORNASSE MAIS DETALHES SOBRE O ERRO
     res.status(500).send({message:e.toString()});
   }
 };
