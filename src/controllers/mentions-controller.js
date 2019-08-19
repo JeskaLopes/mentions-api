@@ -36,7 +36,24 @@ exports.createMentions = async (req, res) => {
   }
 }
 
-/* 
+//update
+exports.updateFunction = async (id, data) => {
+  await Mentions.findByIdAndUpdate(id, {
+    $set: data
+  });
+};
+
+exports.updateMention = async (req, res) => {
+  try {
+    await this.updateFunction(req.params.id, req.body);
+    res.status(200).send({
+      message: 'Menção atualizada com sucesso!'
+    });
+  } catch (e) {
+    res.status(500).send({message:e.toString()});
+};
+}
+
 // delete
 exports.deleteFunction = async id => {
   await Mentions.findOneAndRemove(id);
@@ -51,4 +68,4 @@ exports.deleteMentions = async (req, res) => {
   } catch (e) {
     res.status(500).send({message: e.toString()});
   }
-}; */
+} 
